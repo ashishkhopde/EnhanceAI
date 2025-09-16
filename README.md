@@ -32,6 +32,19 @@ The project is designed for ease of use, enabling anyone to enhance images direc
 🌍 Live Deployment — Accessible anytime via Netlify
 .
 
+
+## ⚙️ Technologies Used
+
+React.js – UI library
+
+Vite – Fast development and build tool
+
+TailwindCSS – Styling
+
+JavaScript (ES6+) – Core logic
+
+
+
 ## 🤝 Contributing
 
 Contributions are always welcome! 🚀
