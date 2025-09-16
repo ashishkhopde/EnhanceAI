@@ -1,4 +1,4 @@
-EnhanceAI
+# EnhanceAI
 
 AI-Powered Image Enhancer
 
@@ -53,4 +53,4 @@ Ensure new code is well-documented and tested.
 Keep pull requests focused on a single feature/fix.
 
 
-### ⚡ Made by ❤️ Ashish Khopde
+#### ⚡ Made by ❤️ Ashish Khopde
