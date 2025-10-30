@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { motion } from 'framer-motion';
 
 export default function ImageUpload({ uploadImageHandler }) {
 
@@ -30,26 +31,44 @@ export default function ImageUpload({ uploadImageHandler }) {
   }
 
   return (
-    <div
-      className='bg-white shadow-lg rounded-2xl p-6 w-full max-w-2xl '
+     <motion.div
+      whileHover={{ scale: 1.02 }}
+      className={`bg-white/10 backdrop-blur-lg border-2 border-dashed rounded-2xl p-10 transition-all duration-200 ease-in-out ${
+        dragging ? "border-blue-500 bg-blue-500/10" : "border-gray-700"
+      }`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
-
       <label
         htmlFor="fileInput"
-        className={`flex flex-col items-center justify-center w-full cursor-pointer border-2 border-dashed rounded-xl p-10 text-center hover:border-blue-500 hover:bg-blue-50 transition duration-200 ease-in-out ${dragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300'}`}
+        className="flex flex-col items-center justify-center cursor-pointer text-center"
       >
-        <input type="file" id='fileInput' className='hidden' onChange={showImageHandler} />
-        <svg className="w-12 h-12 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" />
+        <input
+          type="file"
+          id="fileInput"
+          className="hidden"
+          onChange={showImageHandler}
+          accept="image/*"
+        />
+        <svg
+          className="w-16 h-16 text-blue-400 mb-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"
+          />
         </svg>
-        <span className='text-lg font-medium text-gray-600'>
-          Click or drag your image here
+        <span className="text-lg font-medium text-gray-200">
+          Drag & drop or click to upload your image
         </span>
+        <p className="text-gray-500 mt-2 text-sm">Supports PNG, JPG, JPEG</p>
       </label>
-
-    </div>
+    </motion.div>
   )
 }
