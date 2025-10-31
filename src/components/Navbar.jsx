@@ -50,7 +50,7 @@ export default function Navbar() {
           {!user ? (
             <button
               onClick={openSignIn}
-              className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 px-5 py-2 rounded-full text-white font-semibold hover:opacity-90 transition-all duration-200"
+              className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 px-5 py-2 rounded-full text-white font-semibold hover:opacity-90 transition-all duration-200 cursor-pointer"
             >
               <LogIn size={18} />
               <span>Login</span>
@@ -65,10 +65,6 @@ export default function Navbar() {
               }}
             >
               <UserButton.MenuItems>
-                <UserButton.Action
-                  label="My Bookings"
-                  onClick={() => navigate("/my-bookings")}
-                />
               </UserButton.MenuItems>
             </UserButton>
           )}
