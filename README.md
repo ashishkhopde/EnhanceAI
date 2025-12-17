@@ -2,7 +2,7 @@
 
 AI-Powered Image Enhancer
 
-🔗 Live Demo: https://enhanceai-ai.netlify.app/
+🔗 Live Demo: [https://enhanceai-ai.netlify.app/](https://enhance-image-ai.netlify.app/)
 ## 📌 About
 
 EnhanceAI is a web-based tool that leverages artificial intelligence to enhance image quality.
